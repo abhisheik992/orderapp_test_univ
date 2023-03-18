@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "e4c9420c-0955-405c-a132-6d323e1692cb",
+		"name": "CustomerOrders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Import Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "customerfile",
+							"type": "file",
+							"src": "/C:/Users/RK697CX/Downloads/customers.csv"
+						},
+						{
+							"key": "orderfile",
+							"type": "file",
+							"src": "/C:/Users/RK697CX/Downloads/orders.csv",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer/importcustomers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"importcustomers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import Orders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "customerfile",
+							"type": "file",
+							"src": "/C:/Users/RK697CX/Downloads/customers.csv",
+							"disabled": true
+						},
+						{
+							"key": "orderfile",
+							"type": "file",
+							"src": "/C:/Users/RK697CX/Downloads/orders.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer/importorders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"importorders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer By Id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer/getcustomerbyid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"getcustomerbyid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Customers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer/getallcustomers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"getallcustomers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Customers Transform Data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer/getTrandformData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"getTrandformData"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
